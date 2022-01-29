@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--Bootstrap CDN Links-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!--External CSS-->
+    <link rel="stylesheet" href="~/css/Site.css" />
+
+    <title>@ViewData["Title"] - WebApplication11</title>
+</head>
+<body>
+    <header>
+        <!--header code start-->
+        @*<section id="#price-heading">
+                <nav class="navbar navbar-expand-lg navbar-fixed-top  ">
+                    <div class="container-fluid ">
+                        <a asp-action="Index" class="navbar-brand">
+                            <img src="~/IMAGES/logo.png" height="28" alt="CoolBrand" />
+                        </a>
+                        <button class="navbar-toggler ddmenu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                            <img src="~/IMAGES/list.svg" />
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+                            <div class="navbar-nav text-light">
+                                <a href="#" class="nav-item nav-link menu menu1">Book Now</a>
+                                <a asp-action="Price" class="nav-item nav-link menu">Prices & Services</a>
+                                <a href="#cleaning-heading" class="nav-item nav-link menu">Warranty</a>
+                                <a href="#" class="nav-item nav-link menu">Blog</a>
+                                <a asp-action="Contact" class="nav-item nav-link menu">Contact</a>
+                                <button class="nvbarbtn">Login</button>
+                                <button class="nvbarbtn">Become a Helper</button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+            </section>*@
+        <!--header code end-->
+    </header>
+    <div class="container-fluid">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    
+    <!--footer code start-->
+    <footer>
+        <div class="container d-flex justify-content-between align-items-center fmenu">
+            <img width="100px" src="~/IMAGES/logo.png" alt="logo" />
+            <div class="d-flex flex-wrap text-center justify-content-center fmenulink">
+                <a class="px-3" asp-action="Index">HOME</a>
+                <a class="px-3" asp-action="About">ABOUT</a>
+                <a class="px-3" href="#">TESTIMONIALS</a>
+                <a class="px-3" asp-action="Faq">FAQS</a>
+                <a class="px-3" href="#">INSURRANCE POLICY</a>
+                <a class="px-3" href="#">IMPRESSUM</a>
+            </div>
+            <div>
+                <img class="img-fluid fimg1" src="~/IMAGES/ic-facebook.png" />
+                <img class="img-fluid fimg2" src="~/IMAGES/ic-instagram.png" />
+            </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center text-center" style="margin-top:10px">
+            <hr style="border-bottom: 1px solid grey; width: 88%" />
+        </div>
+
+        <p class="text-center right">
+            ©2018 Helperland. All rights reserved. Terms and Conditions | Privacy Policy
+        </p>
+    </footer>
+    <!--footer code end-->
+    <!-- cookies section start -->
+    <section class="container-fluid" id="cookies">
+        <div class="row justify-content-end">
+            <div class="col-md-10 text1 text-center">
+                <p class="">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat nunc libero, ac malesuada ligula aliquam
+                    ac.
+                    <a href="">Privacy Policy</a>
+                </p>
+            </div>
+            <div class="col-md-2 text-center text-md-end">
+                <button class="btn" type="submit">
+                    <p class="m-0 p-0">OK!</p>
+                </button>
+            </div>
+        </div>
+
+    </section>
+    <!-- cookies section end -->
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
